@@ -9,7 +9,7 @@ class Wags:
         pass
 
     async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
-        immutable_scope = ImmutableScope(scope)
+        self._scope = ImmutableScope(scope)
 
         await send({
             'type': 'http.response.start',
