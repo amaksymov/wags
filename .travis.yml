@@ -10,8 +10,6 @@ install:
   - poetry install -v
 script:
   - pytest --ignore venv --cov=wags --cov=tests --cov-fail-under=89 --cov-report=term-missing
-
-after_script:
   - codecov
 
 jobs:
