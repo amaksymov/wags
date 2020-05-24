@@ -1,22 +1,27 @@
 language: python
 python:
- - "3.6"
- - "3.7"
- - "3.8"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+
 install:
- - pip install --upgrade pip
- - pip install poetry
- - poetry install -v
+  - pip install --upgrade pip
+  - pip install poetry
+  - poetry install -v
 script:
- - pytest
+  - pytest
 
- before_deploy:
-    - mkdocs build --verbose --clean --strict
-
-deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    local_dir: site
-    on:
-        branch: master
+jobs:
+  include:
+    - stage: Publish docs
+      python: 3.8
+      script:
+        - poetry -v
+        - mkdocs build --verbose --clean --strict
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        local_dir: site
+        on:
+          branch: master
