@@ -11,6 +11,9 @@ install:
 script:
   - pytest
 
+after_script:
+  - codecov
+
 jobs:
   include:
     - stage: Publish docs
