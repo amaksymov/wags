@@ -1,10 +1,9 @@
-# Wags
+# Welcome to Wags web-framework
 
-[![Build Status](https://travis-ci.com/amaksymov/wags.svg?branch=master)](https://travis-ci.com/amaksymov/wags)
+Main idea of Wags is [Elegant Objects](https://www.elegantobjects.org){target=_blank}.
+Inspired by [Starlette](https://www.starlette.io){target=_blank}.
 
-Web Framework
-
-## Example:
+Quick start:
 ```python
 from wags.responses import Response
 from wags.routing import Handle, Route, Routing
