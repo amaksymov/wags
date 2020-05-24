@@ -9,3 +9,14 @@ install:
  - poetry install -v
 script:
  - pytest
+
+ before_deploy:
+    - mkdocs build --verbose --clean --strict
+
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: site
+    on:
+        branch: master
