@@ -1,6 +1,7 @@
 # Wags
 
 [![Build Status](https://travis-ci.com/amaksymov/wags.svg?branch=master)](https://travis-ci.com/amaksymov/wags)
+[![Build Status](https://codecov.io/gh/amaksymov/wags/branch/master/graph/badge.svg)](https://codecov.io/gh/amaksymov/wags)
 
 Web Framework
 
