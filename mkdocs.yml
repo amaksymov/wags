@@ -1,0 +1,11 @@
+site_name: Wags
+site_description: Object-Oriented ASGI Web Framework.
+
+theme:
+    name: material
+markdown_extensions:
+  - attr_list
+  - codehilite
+
+repo_name: amaksymov/wags
+repo_url: https://github.com/amaksymov/wags

@@ -1,7 +1,9 @@
-# wags
-Web Framework
+# Welcome to Wags web-framework
 
-## Example:
+Main idea of Wags is [Elegant Objects](https://www.elegantobjects.org){target=_blank}.
+Inspired by [Starlette](https://www.starlette.io){target=_blank}.
+
+Quick start:
 ```python
 from wags.responses import Response
 from wags.routing import Handle, Route, Routing
