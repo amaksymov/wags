@@ -8,14 +8,13 @@ from wags.routing import Route, Handle, RouteNoMatch
 from wags.datastructures import ImmutableScope
 
 
-class IndexHandle(Handle):
-    async def map(self, request):
-        return Response(content='Mock response', content_type='text/plain')
+async def handle_func(request):
+    return Response(content='Mock response', content_type='text/plain')
 
 
 @pytest.mark.asyncio
 async def test_route_match():
-    route = Route('/', IndexHandle())
+    route = Route('/', Handle(handle_func))
 
     request = Request(
         ImmutableScope({
@@ -57,7 +56,7 @@ async def test_route_match():
 
 @pytest.mark.asyncio
 async def test_route_response():
-    route = Route('/', IndexHandle())
+    route = Route('/', Handle(handle_func))
     request = Request(
         ImmutableScope({
             'path': '/',
