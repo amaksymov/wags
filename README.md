@@ -4,7 +4,7 @@
 
 Web Framework
 
-## Example:
+## Example app.py:
 ```python
 from wags.responses import Response
 from wags.routing import Handle, Route, Routing
