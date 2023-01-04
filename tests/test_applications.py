@@ -15,7 +15,7 @@ def test_version():
 
 @pytest.mark.asyncio
 async def test_applications():
-    client = TestClient(Wags(Routing(list())))
+    client = TestClient(Wags(Routing([])))
     send_queue = await client.request({
         'type': 'http',
         'method': 'GET',
