@@ -35,14 +35,10 @@ class Route:
         raise RouteNoMatch()
 
     def match_path(self, request) -> bool:
-        if request.match_path(self._path):
-            return True
-        return False
+        return bool(request.match_path(self._path))
 
     def match_method(self, requst) -> bool:
-        if requst.match_method(self._methods):
-            return True
-        return False
+        return bool(requst.match_method(self._methods))
 
     def __str__(self) -> str:
         return f'Response(path=\'{self._path}\', method=\'{self._methods}\', handle=\'{self._handle}\')'
